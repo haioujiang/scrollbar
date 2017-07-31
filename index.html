@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll</title>
+	<link rel="stylesheet" href="resource/reset.css">
+	<style>
+		body{
+			background: #ccc;
+		}
+		.scroll-demo{
+			width: 540px;
+			border: 1px solid #e5e5e5;
+			background: #fff;
+			margin: 10px auto;
+
+		}
+		/* 标签切换区 */
+		.scroll-tab{
+			height: 34px;
+			border-bottom: 1px solid #e5e5e5;
+			color: #666;
+			background: #f8f8f8;
+		}
+		.scroll-tab .tab-item{
+			float: left;
+			font:14px/34px "Microsoft Yahei";
+			height: 34px;
+			text-align: center;
+			border-right: 1px solid #e5e5e5;
+			padding: 0 20px;
+		}
+		.scroll-tab .tab-active{
+			color: #00be3c;
+			background: #fff;
+			border-top: 2px solid #00be3c;
+			margin: -1px 0;
+		}
+		/*滚动内容区*/
+		.scroll-wrap{
+			width: 100%;
+			height: 300px;
+			position: relative;
+		}	
+		.scroll-cont{
+			height: 100%;
+			overflow: hidden;
+			padding: 0 15px;
+		}
+		.scroll-cont h3{
+			font:16px/3 "Microsoft Yahei";
+		}
+		.scroll-cont p{
+			 margin-bottom: 10px;   /* 设置之后矫正盒子高度需要调整 */
+		}
+		/*滚动条*/
+		.scroll-bar{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 10px;
+			height: 100%;
+			background-color: #eaeaea;
+		}
+		/*滑块*/
+		.scroll-slider{
+			position: absolute;
+			top: 0;
+			left: 1px;
+			width: 8px;
+			height: 30px;
+			background-color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="scroll-demo">
+		<!-- 标签切换区 -->
+		<ul class="scroll-tab clearfix">
+			<li class="tab-item tab-active">第一篇</li>
+			<li class="tab-item">第二篇</li>
+			<li class="tab-item">第三篇</li>
+			<li class="tab-item">第四篇</li>
+		</ul>
+		<!--内容滚动区 -->
+		<div class="scroll-wrap">
+			<!-- 滚动内容区 -->
+			<div class="scroll-cont">
+				<h3 class="anchor">诗词鉴赏1</h3>
+				<div class="scroll-ol">
+					<p>
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						穷居寡人用，时忘四运周。
+						门庭多落叶，慨然知已秋。
+					</p>
+				</div>	
+				<h3 class="anchor">诗词鉴赏2</h3>
+				<div class="scroll-ol">
+					<p>
+						新葵郁北牖，嘉穟养南畴。
+						新葵郁北牖，嘉穟养南畴。
+						新葵郁北牖，嘉穟养南畴。
+						新葵郁北牖，嘉穟养南畴。
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						今我不为乐，知有来岁不？
+						命室携童弱，良日登远游。
+				   </p>
+				</div>	
+				<h3 class="anchor">诗词鉴赏3</h3>
+				<div class="scroll-ol">
+					<p>
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						荆溪白石出，天寒红叶稀。
+						山路元无雨，空翠湿人衣。
+						山路元无雨，空翠湿人衣。
+						山路元无雨，空翠湿人衣。
+						山路元无雨，空翠湿人衣。
+					</p>
+				</div>
+				<h3 class="anchor">诗词鉴赏4</h3>
+				<div class="scroll-ol">
+					<p>
+						百尺章台撩乱飞，重重帘幕弄春晖。怜他飘泊奈他飞。
+						澹日滚残花影下，软风吹送玉楼西。天涯心事少人知。
+						澹日滚残花影下，软风吹送玉楼西。天涯心事少人知。
+						澹日滚残花影下，软风吹送玉楼西。天涯心事少人知。
+						澹日滚残花影下，软风吹送玉楼西。天涯心事少人知。
+						澹日滚残花影下，软风吹送玉楼西。天涯心事少人知。
+						1
+					</p>
+					<div class="correct-bot"></div>  <!-- 如果最后一篇文章的高度比内容区域小,就没办法置顶显示,添加一个高度补全盒子 -->
+				</div>	
+			</div>
+			<!--滚动条 -->
+			<div class="scroll-bar">
+				<!-- 滚动滑块 -->
+				<div class="scroll-slider">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src='resource/jquery.js'></script>
+	<script src="resource/face-process.js"></script>
+</body>
+</html>
